@@ -1,0 +1,16 @@
+{
+    "name": "estaduardo/admin_personas_back",
+    "description": "Backend de la prueba tecnica de Macarenia Corp",
+    "autoload": {
+        "psr-4": {
+            "Estaduardo\\AdminPersonasBack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kevin Sarria",
+            "email": "reysabueso256@gmail.com"
+        }
+    ],
+    "require": {}
+}
