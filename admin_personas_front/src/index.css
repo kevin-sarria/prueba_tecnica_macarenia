@@ -12,7 +12,7 @@
 }
 
 .sub-title {
-    @apply p-3 w-full rounded-full bg-gradient-to-l from-blue-500 via-slate-700 to-lime-500 text-xl text-white font-semibold;
+    @apply p-3 w-full rounded-full bg-gradient-to-l from-sky-500 via-slate-700 to-lime-500 text-xl text-white font-semibold;
 }
 
 .formulario--principal {
@@ -51,4 +51,133 @@
 
 .field--found-advanced button {
     @apply flex items-center px-5 py-2 rounded-xl gap-x-1 border border-blue-800 text-blue-800 font-medium uppercase;
+}
+
+/* Modal Section */
+.modalSection {
+    @apply fixed w-full h-full bg-white p-10 top-0 left-0;
+}
+
+.modalSection__container {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    @apply mt-5 py-1 rounded-xl;
+}
+
+/* SearchBar */
+
+.searchBar {
+    @apply w-full my-5 mx-5;
+}
+
+.searchBar__container {
+    @apply w-fit flex gap-x-2 p-2 border-2 rounded-xl;
+}
+
+.searchBar__container label img {
+    @apply w-7 h-7 cursor-pointer;
+}
+
+.searchBar__container input {
+    @apply outline-none font-medium text-slate-600;
+}
+
+/* Table */
+.table--section {
+    @apply w-full max-h-96 overflow-y-auto;
+}
+
+.table {
+    @apply w-full;
+}
+
+.table__thead {
+    @apply bg-gray-400 bg-opacity-40;
+}
+
+.table__thead tr th {
+    @apply p-3 text-center border border-neutral-300 font-medium;
+}
+
+.table__tbody {
+    @apply max-w-xs;
+}
+
+.table__tbody tr {
+    @apply hover:bg-gray-100;
+}
+
+.table__tbody tr td {
+    @apply border-b border-b-neutral-300 border-r border-r-neutral-300 last-of-type:border-r-0 text-center p-3;
+}
+.table__tbody tr td {
+    @apply border-b border-b-neutral-300 border-r border-r-neutral-300 last-of-type:border-r-0 text-center p-3;
+}
+
+.table--options {
+    @apply flex items-center justify-center gap-x-3;
+}
+
+.table--options button img {
+    @apply w-8 h-8;
+}
+
+/* Paginador */
+.paginador {
+    @apply flex items-center gap-x-1 ml-5 my-5;
+}
+
+.paginador .back,
+.paginador .next,
+.paginador .page {
+    @apply cursor-pointer py-1 px-4;
+}
+
+.paginador .back,
+.paginador .next,
+.paginador .separator,
+.paginador .page {
+    @apply text-neutral-400;
+}
+
+.paginador .page {
+    @apply hover:bg-sky-800 hover:text-white text-lg font-medium rounded;
+}
+
+.paginador .back,
+.paginador .next {
+    @apply hover:text-sky-800 font-bold text-xl;
+}
+
+.paginador .page--active {
+    @apply bg-sky-900 text-white hover:bg-sky-900;
+}
+
+/* Opciones SearchAdvanced */
+.opcionesSearchAdvanced {
+    @apply flex items-center justify-end mr-5 mb-4;
+}
+
+.opcionesSearchAdvanced__container {
+    @apply flex items-center gap-x-3 mr-5;
+}
+
+.opcionesSearchAdvanced--limpiar,
+.opcionesSearchAdvanced--eliminar {
+    @apply flex gap-x-1 py-2 px-4 border rounded-xl;
+}
+
+.opcionesSearchAdvanced--limpiar {
+    @apply border-sky-900 text-sky-900 font-medium;
+}
+
+.opcionesSearchAdvanced--eliminar {
+    @apply border-red-600 bg-red-600 text-white font-medium hover:bg-red-500;
+}
+
+.opcionesSearchAdvanced--eliminar span {
+    @apply font-semibold text-base;
+}
+
+.opcionesSearchAdvanced--limpiar img {
+    @apply w-6 h-6;
 }
