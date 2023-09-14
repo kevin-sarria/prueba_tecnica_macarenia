@@ -1,14 +1,17 @@
-interface Props {
-    body: JSX.Element | null;
-    isModalOpen: boolean;
-}
+import { useContext } from "react";
+import { AdminPeopleContext } from "../../context";
 
-export const Modal = ({ body, isModalOpen }: Props) => {
+export const Modal = () => {
+
+    const modal = useContext(AdminPeopleContext);
+    const isModalOpen = modal?.isModalOpen;
+    const contentModal = modal?.contentModal;
+
     return (
       <>
       {isModalOpen && 
         <div className="overlay">
-            {body}
+            {contentModal}
         </div>}
       </>)
   };

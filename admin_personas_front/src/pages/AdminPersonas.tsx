@@ -1,4 +1,26 @@
+import { useContext } from "react";
+import { AdminPeopleContext } from "../context";
+import { AdminPersonasForm } from ".";
+
 export const AdminPersonas = () => {
+
+    const context = useContext(AdminPeopleContext);
+
+    const advancedSearch = context?.advancedSearch;
+    const isEditingPersonas = context?.isEditingAdminPersonas;
+    const openCloseModal = context?.openCloseModal;
+
+    const functionsAdminPersonas = {
+        showAlertInfo: context?.showAlertInfo,
+        showAlertSuccess: context?.showAlertSuccess,
+        showAlertError: context?.showAlertError,
+        openCloseModal
+    }
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+    }
+
   return (
     <section className="main--content">
 
@@ -6,7 +28,7 @@ export const AdminPersonas = () => {
 
         <h2 className="sub-title">Informacion</h2>
 
-        <form className="formulario--principal">
+        <form className="formulario--principal" onSubmit={handleSubmit}>
 
             <div className="field">
                 <label htmlFor="type_document">Tipo de documento *</label>
@@ -26,13 +48,18 @@ export const AdminPersonas = () => {
             </div>
 
             <div className="field--found-advanced">
-                <button>
+                <button onClick={advancedSearch}>
                     <span>Busqueda Avanzada</span>
                     <img src="/img/icons/search.svg" alt="Imagen Lupa" />
                 </button>
             </div>
 
         </form>
+
+        {
+            isEditingPersonas && <AdminPersonasForm functionsPersonas={functionsAdminPersonas} />
+        }
+
     </section>
   )
 }
