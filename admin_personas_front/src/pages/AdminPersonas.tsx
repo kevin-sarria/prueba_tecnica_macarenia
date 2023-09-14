@@ -1,11 +1,21 @@
 import { useContext } from "react";
 import { AdminPeopleContext } from "../context";
+import { AdminPersonasForm } from ".";
 
 export const AdminPersonas = () => {
 
     const context = useContext(AdminPeopleContext);
 
     const advancedSearch = context?.advancedSearch;
+    const isEditingPersonas = context?.isEditingAdminPersonas;
+    const openCloseModal = context?.openCloseModal;
+
+    const functionsAdminPersonas = {
+        showAlertInfo: context?.showAlertInfo,
+        showAlertSuccess: context?.showAlertSuccess,
+        showAlertError: context?.showAlertError,
+        openCloseModal
+    }
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
@@ -45,6 +55,11 @@ export const AdminPersonas = () => {
             </div>
 
         </form>
+
+        {
+            isEditingPersonas && <AdminPersonasForm functionsPersonas={functionsAdminPersonas} />
+        }
+
     </section>
   )
 }

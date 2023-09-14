@@ -1,10 +1,11 @@
 import { dataTable } from ".";
 
 interface Props {
-  toggleModal: (() => void) | undefined;
+  toggleModal?: (() => void) | undefined;
+  editPersonas: (() => void) | undefined;
 }
 
-export const Table = ({ toggleModal }: Props) => {
+export const Table = ({ editPersonas }: Props) => {
   return (
     <div className="table--section">
       <table className="table">
@@ -29,7 +30,7 @@ export const Table = ({ toggleModal }: Props) => {
               <td>{obj?.first_lastname}</td>
               <td>
                 <div className="table--options">
-                  <button onClick={toggleModal}>
+                  <button onClick={editPersonas}>
                     <img src="/img/icons/pencil.png" alt="Icono Editar" />
                   </button>
                   <button>

@@ -4,7 +4,12 @@ import { useModal } from "../hooks";
 interface Modal {
     openCloseModal: () => void;
     advancedSearch: ( e: any ) => void;
+    editingAdminPersonas: () => void;
+    showAlertInfo: () => void;
+    showAlertSuccess: () => void;
+    showAlertError: () => void;
     isModalOpen: boolean;
+    isEditingAdminPersonas: boolean;
     contentModal: JSX.Element | null;
 }
 
