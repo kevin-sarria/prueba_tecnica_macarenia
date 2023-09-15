@@ -3,7 +3,10 @@
     "description": "Backend de la prueba tecnica de Macarenia Corp",
     "autoload": {
         "psr-4": {
-            "Estaduardo\\AdminPersonasBack\\": "src/"
+            "MVC\\": "./",
+            "Model\\": "./model/",
+            "Controllers\\": "./controllers/",
+            "Classes\\": "./classes/"
         }
     },
     "authors": [
@@ -12,5 +15,7 @@
             "email": "reysabueso256@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
 }
