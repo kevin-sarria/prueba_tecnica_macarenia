@@ -1,0 +1,475 @@
+{
+	"info": {
+		"_postman_id": "1ce8846b-a8c9-4ca7-9a93-a1f88e93f758",
+		"name": "Prueba_Macarenia_Corp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19594500"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/listar-personas",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"listar-personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Andres",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "890339081",
+									"type": "text"
+								},
+								{
+									"key": "middle_name",
+									"value": "Camilo",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Galeano",
+									"type": "text"
+								},
+								{
+									"key": "second_surname",
+									"value": "Sanchez",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2002-11-09",
+									"type": "text"
+								},
+								{
+									"key": "country_birth",
+									"value": "Colombia",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Masculino",
+									"type": "text"
+								},
+								{
+									"key": "civil_status",
+									"value": "Casado",
+									"type": "text"
+								},
+								{
+									"key": "id_type_document",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/crear-persona",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"crear-persona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "1092893048",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Pedro",
+									"type": "text"
+								},
+								{
+									"key": "middle_name",
+									"value": "Jose",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Miranda",
+									"type": "text"
+								},
+								{
+									"key": "second_surname",
+									"value": "Perez",
+									"type": "text"
+								},
+								{
+									"key": "birthdate",
+									"value": "2002-11-09",
+									"type": "text"
+								},
+								{
+									"key": "country_birth",
+									"value": "Colombia",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Masculino",
+									"type": "text"
+								},
+								{
+									"key": "civil_status",
+									"value": "Soltero",
+									"type": "text"
+								},
+								{
+									"key": "id_type_document",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/editar-persona",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"editar-persona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/eliminar-persona",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"eliminar-persona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por documento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "document_number",
+									"value": "1092893048",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/listar-persona-documento",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"listar-persona-documento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tareas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL_BASE}}/listar-tareas",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"listar-tareas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Cualquier cosa",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Esto es una prueba",
+									"type": "text"
+								},
+								{
+									"key": "limit_date",
+									"value": "2023-09-16",
+									"type": "text"
+								},
+								{
+									"key": "id_person",
+									"value": "12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/crear-tarea",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"crear-tarea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Cocinar el Cerdo",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Debo hacer una receta de Cerdo cocido",
+									"type": "text"
+								},
+								{
+									"key": "limit_date",
+									"value": "2023-09-17",
+									"type": "text"
+								},
+								{
+									"key": "id_person",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/editar-tarea",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"editar-tarea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/eliminar-tarea",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"eliminar-tarea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por fecha limite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "limit_date",
+									"value": "2023-09-15",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/filtrar-fecha-limite",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"filtrar-fecha-limite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por fechas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "initial_deadline",
+									"value": "2023-09-11",
+									"type": "text"
+								},
+								{
+									"key": "final_deadline",
+									"value": "2023-09-25",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/filtrar-rango-fecha-limite",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"filtrar-rango-fecha-limite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtrar por persona",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "document_number",
+									"value": "1092893049",
+									"type": "text"
+								},
+								{
+									"key": "id_type_document",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL_BASE}}/filtrar-tarea-persona",
+							"host": [
+								"{{URL_BASE}}"
+							],
+							"path": [
+								"filtrar-tarea-persona"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_BASE",
+			"value": "http://localhost:4000"
+		}
+	]
+}
