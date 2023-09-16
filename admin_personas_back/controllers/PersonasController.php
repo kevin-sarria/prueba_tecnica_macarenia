@@ -69,15 +69,6 @@ class PersonasController {
                     return;
                 } else {
 
-                    $registered_document = Personas::where('document_number', $personas->document_number );
-
-                    if( $registered_document ) {
-                        Personas::setAlerta('error', 'Ya existe un usuario con este documento');
-                        $alertas = Personas::getAlertas();
-                        echo json_encode($alertas);
-                        return;
-                    }
-
                     $personas->guardar();
                     $response = Personas::find($personas->id);
                     http_response_code(200);

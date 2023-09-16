@@ -188,7 +188,7 @@
 }
 
 .formulario--edit-personas {
-    @apply grid grid-cols-2 gap-x-5 px-5 mt-5;
+    @apply grid grid-cols-2 gap-x-5 px-5 mt-5 relative pb-28;
 }
 
 .formulario--edit-personas .field label {
@@ -200,7 +200,7 @@
 }
 
 .opcionesAdminPersonasForm {
-    @apply flex items-center justify-end mr-5 mb-4 mt-5;
+    @apply absolute bottom-5 right-5;
 }
 
 .opcionesAdminPersonasForm__container {

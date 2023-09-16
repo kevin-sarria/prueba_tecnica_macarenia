@@ -1,12 +1,16 @@
 interface Props {
   toggleModal: (() => void) | undefined;
+  showAlert: ( () => void ) | undefined;
 }
 
-export const OpcionesSearchAdvanced = ({ toggleModal }: Props) => {
+export const OpcionesSearchAdvanced = ({ toggleModal, showAlert }: Props) => {
   return (
     <div className="opcionesSearchAdvanced">
       <div className="opcionesSearchAdvanced__container">
-        <button className="opcionesSearchAdvanced--limpiar">
+        <button
+          className="opcionesSearchAdvanced--limpiar"
+          onClick={showAlert}
+        >
             <p>Limpiar</p>
             <img src="/img/icons/limpiar.svg" alt="Icono Limpiar" />
         </button>

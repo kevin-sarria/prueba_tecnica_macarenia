@@ -25,9 +25,12 @@ export const Alert = ({ urlImage = "/img/icons/info.png" }: Props) => {
               <p>Cancelar</p>
             </button>
 
-            <button className="alert--options__guardar">
+            <button
+              className="alert--options__guardar"
+              onClick={openCloseModal}
+            >
               <img src="/img/icons/save.svg" alt="Icono Guardar" />
-              <p>Guardar</p>
+              <p>Aceptar</p>
             </button>
           
         </div>

@@ -1,16 +1,20 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
 import { useModal } from "../hooks";
 
 interface Modal {
     openCloseModal: () => void;
     advancedSearch: ( e: any ) => void;
     editingAdminPersonas: () => void;
+    setPersonaSelected: Dispatch<SetStateAction<Object>>;
     showAlertInfo: () => void;
     showAlertSuccess: () => void;
     showAlertError: () => void;
+    closeEditingAdminPersona: () => void;
+    deletePersonSelected: () => void;
     isModalOpen: boolean;
     isEditingAdminPersonas: boolean;
     contentModal: JSX.Element | null;
+    personaSelected: Object;
 }
 
 interface Props {

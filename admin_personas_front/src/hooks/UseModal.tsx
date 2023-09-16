@@ -1,22 +1,31 @@
-import { useState } from "react";
-import { Alert, SearchAdvanced } from "../pages";
+import { useState, useEffect } from "react";
+import { Alert, DeletePerson, SearchAdvanced } from "../pages";
 
 export const useModal = () => {
 
     const [ isModalOpen, setIsModalOpen ] = useState<boolean>(false);
     const [ isEditingAdminPersonas, setIsEditingAdminPersonas ] = useState<boolean>(false);
-    const [ contentModal, setContentModal ] = useState(<></>);
+    const [ contentModal, setContentModal ] = useState<JSX.Element>(<></>);
+
+    const [ personaSelected, setPersonaSelected ] = useState<Object>({});
+
+    useEffect( () => {
+        if( !isModalOpen ) {
+            setContentModal(<></>);
+        }
+    }, [isModalOpen] );
 
     const openCloseModal = () => {
         setIsModalOpen( !isModalOpen );
-        if( !setIsModalOpen ) {
-            setContentModal(<></>);
-        }
+    };
+
+    const closeEditingAdminPersona = () => {
+        setIsEditingAdminPersonas( false );
     };
 
     const editingAdminPersonas = () => {
-        setIsModalOpen( prev => !prev );
-        setIsEditingAdminPersonas( prev => !prev );
+        setIsModalOpen( false );
+        setIsEditingAdminPersonas( true );
     };
 
     const advancedSearch = ( e: any ) => {
@@ -28,7 +37,7 @@ export const useModal = () => {
 
     const showAlertInfo = () => {
         setContentModal( <Alert /> ); // Aqui va el componente
-        openCloseModal();
+        // openCloseModal();
     }
 
     const showAlertSuccess = () => {
@@ -41,6 +50,10 @@ export const useModal = () => {
         openCloseModal();
     }
 
+    const deletePersonSelected = (data: any) => {
+        setContentModal( <DeletePerson urlImage="/img/icons/error.png" person={data} /> ); // Aqui va el componente
+    }
+
     return {
         
         // Functions
@@ -50,12 +63,16 @@ export const useModal = () => {
         showAlertInfo,
         showAlertSuccess,
         showAlertError,
+        setPersonaSelected,
+        closeEditingAdminPersona,
+        deletePersonSelected,
 
 
         // Variables
         isModalOpen,
         contentModal,
-        isEditingAdminPersonas
+        isEditingAdminPersonas,
+        personaSelected
 
     }
 
