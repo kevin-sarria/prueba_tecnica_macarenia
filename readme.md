@@ -42,3 +42,9 @@ Para instalar las dependencias del Backend, teniendo en cuenta que se uso PHP co
 Para ejecutar el backend y que quede ejecutándose en local basta con tan solo escribir el siguiente comando y ejecutarlo:
 
 > php -S localhost:4000
+
+### Conmfigurar Variables de entorno
+
+Para configurar las variables de entorno buscar en las carpetas admin_personas_back/config/.env.template y admin_personas_back/.env.template,
+alli se debe cambiar el nombre del archivo de .env.template a .env, luego abrirlos y seguir los pasos o las recomendaciones que alli aparecen,
+con esto configurado el sistema ya deberia funcionar correctamente.

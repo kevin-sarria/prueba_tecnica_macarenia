@@ -9,12 +9,16 @@ export const AdminPersonas = () => {
     const advancedSearch = context?.advancedSearch;
     const isEditingPersonas = context?.isEditingAdminPersonas;
     const openCloseModal = context?.openCloseModal;
+    const personaSelected = context?.personaSelected;
+    const closeEditingAdminPersona = context?.closeEditingAdminPersona;
 
     const functionsAdminPersonas = {
         showAlertInfo: context?.showAlertInfo,
         showAlertSuccess: context?.showAlertSuccess,
         showAlertError: context?.showAlertError,
-        openCloseModal
+        openCloseModal,
+        personaSelected,
+        closeEditingAdminPersona
     }
 
     const handleSubmit = (e: any) => {
@@ -57,7 +61,7 @@ export const AdminPersonas = () => {
         </form>
 
         {
-            isEditingPersonas && <AdminPersonasForm functionsPersonas={functionsAdminPersonas} />
+            isEditingPersonas && <AdminPersonasForm personaSelected={personaSelected} functionsPersonas={functionsAdminPersonas} />
         }
 
     </section>
